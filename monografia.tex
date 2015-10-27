@@ -1,0 +1,180 @@
+%
+% Exemplo LaTeX de monografia UNISINOS
+%
+% Elaborado com base nas orientações dadas no documento
+% ``GUIA PARA ELABORAÇÃO DE TRABALHOS ACADÊMICOS''
+% disponível no site da biblioteca da Unisinos.
+% http://www.unisinos.br/biblioteca
+%
+% Os elementos textuais abaixo são apresentados na ordem em que devem
+% aparecer no documento.  Repare que nem todos são obrigatórios - isso
+% é devidamente indicado em cada caso.
+%
+% Comentários abaixo colocados entre aspas (`` '') foram
+% extraídos diretamente do documento da biblioteca.
+%
+% Este documento é de domínio público.
+%
+
+%=======================================================================
+% Declarações iniciais identificando a classe de documento e
+% selecionando alguns pacotes adicionais.
+%
+% As opções disponíveis (separe-as com vírgulas, sem espaço) são:
+% - twoside: Formata o documento para impressão frente-e-verso
+%   (o default é somente-frente)
+% - english,brazilian,french,german,etc.: idiomas usados no documento.
+%   Deve ser colocado por último o idioma principal.
+%=======================================================================
+\documentclass[twoside,english,brazilian]{UNISINOSmonografia}
+\usepackage[utf8]{inputenc} % charset do texto (utf8, latin1, etc.)
+\usepackage[T1]{fontenc} % encoding da fonte (afeta a sep. de sílabas)
+\usepackage{graphicx} % comandos para gráficos e inclusão de figuras
+\usepackage{bibentry} % para inserir refs. bib. no meio do texto
+
+%=======================================================================
+% Escolha do sistema para geração de referências bibliográficas.
+%
+% O default é usar o estilo unisinos.bst.  Comente a definição abaixo
+% e descomente a linha seguinte para usar o estilo do ABNTeX (é
+% necessário ter esse pacote instalado).
+%
+% A vantagem do unisinos.bst é que ele permite o uso de um arquivo .bib
+% seguindo as orientações tradicionais do BibTeX (veja essas orientações
+% em http://ctan.tug.org/tex-archive/biblio/bibtex/contrib/doc/btxdoc.pdf).
+% Entretanto, o estilo não suporta algumas citações mais exóticas como
+% apud.  Para isso, use o ABNTeX, mas esteja ciente de que muitas de
+% suas referências serão incompatíveis com os estilos tradicionais do
+% BibTeX como plain, alpha, ieeetr, entre outros.
+%=======================================================================
+\unisinosbst
+%\usepackage[alf]{abntcite}
+
+%=======================================================================
+% Dados gerais sobre o trabalho.
+%=======================================================================
+\autor{Tal}{Fulano de}
+\titulo{Exemplo de Monografia no Padrão da IFSP}
+\subtitulo{Versão \LaTeX}
+\orientador[Prof.~Dr.]{Knuth}{Donald E.}
+%\coorientador[Prof.~Dr.]{Lamport}{Leslie}
+\local{Votuporanga}
+\ano{2015}
+
+%% dados específicos para Dissertação de Mestrado
+%\unidade{Unidade Acadêmica de Pesquisa e Pós-Graduação}
+%\curso{Programa de Pós-Graduação em Computação Aplicada}
+%\nivel{Nível Mestrado}
+%\natureza{%
+%Dissertação apresentada como requisito parcial para a obtenção
+%do título de Mestre pelo Programa de Pós-Graduação em Computação
+%Aplicada da Universidade do Vale do Rio dos Sinos --- UNISINOS
+%}
+%% dados da ficha catalográfica (obrigatória somente para diss. e tese)
+%\cip{Dissertação (mestrado)}{004.732}
+%\bibliotecario{Bibliotecária responsável: Fulana da Silva}{12/3456}
+
+%% dados específicos para monografia de Graduação
+\unidade{IFSP - Campus Votuporanga}
+\curso{Curso Integrado ao Ensino Médio - MSI}
+\natureza{%
+Trabalho de Conclusão de Curso apresentado como requisito parcial
+para a obtenção do título de Técnico em Manutenção e Suporte em Informática
+}
+
+% cada palavra-chave deve ser fornecida duas vezes, uma em português e
+% outra no idioma estrangeiro (na verdade, em tantos idiomas quantos se
+% desejar).
+\palavrachave{brazilian}{IFSP}
+\palavrachave{brazilian}{ABNT}
+\palavrachave{brazilian}{\LaTeX}
+\palavrachave{brazilian}{Formatação de documentos}
+\palavrachave{english}{IFSP}
+\palavrachave{english}{ABNT}
+\palavrachave{english}{\LaTeX}
+\palavrachave{english}{Document typesetting}
+
+%=======================================================================
+% Início do documento.
+%=======================================================================
+\begin{document}
+\capa
+\folhaderosto
+%\folhadeaprovacao % não deve ser incluída nos TCCs
+
+%=======================================================================
+% Dedicatória (opcional).
+%
+% O texto é normalmente colocado na parte de baixo da página, alinhado
+% à direita.  Mas a formatação é basicamente livre.  Só não se escreve
+% a palavra 'dedicatória'.
+%=======================================================================
+\begin{dedicatoria}
+Aos nossos pais.\\[4ex] % quebra a linha dando um espaçamento maior
+\begin{itshape} % faz o texto ficar em itálico
+If I have seen farther than others,\\
+it is because I stood on the shoulders of giants.\\
+\end{itshape}
+--- \textsc{Sir Isaac Newton} % \textsc é o "small caps"
+\end{dedicatoria}
+
+%=======================================================================
+% Agradecimentos (opcional).
+%=======================================================================
+\begin{agradecimentos}
+Obrigado!
+\end{agradecimentos}
+
+%=======================================================================
+% Epígrafe (opcional).
+%
+% ``[...] o autor apresenta uma citação, seguida de indicação de autoria,
+% relacionada com a matéria tratada no corpo do trabalho. Podem, também,
+% constar epígrafes nas folhas de aberturas das seções primárias.''
+%=======================================================================
+\begin{epigrafe}
+``\textit{Ninguém abre um livro sem que aprenda alguma coisa}''.\\
+(Anônimo)
+\end{epigrafe}
+
+
+\include{resumo}
+
+\include{abstract}
+
+
+%=======================================================================
+% Lista de Figuras (opcional).
+%=======================================================================
+\listoffigures
+
+%=======================================================================
+% Lista de Tabelas (opcional).
+%=======================================================================
+\listoftables
+
+\include{abreviaturas}
+
+\include{siglas}
+
+\include{simbolos}
+
+%=======================================================================
+% Sumário
+%=======================================================================
+\tableofcontents
+
+\include{introducao}
+
+\include{cap01}
+
+\include{cap02}
+
+%=======================================================================
+% Referências
+%=======================================================================
+\bibliography{exemplo}
+
+\include{apendice}
+
+\end{document}

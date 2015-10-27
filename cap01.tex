@@ -1,0 +1,69 @@
+%=======================================================================
+% Escrevendo o Texto
+%=======================================================================
+\chapter{Escrevendo o Texto}
+
+\section{Comandos do \LaTeX}
+Como regra geral, use os comandos tradicionais do \LaTeX\ para formatar seu texto.  Neste documento procuramos demonstrar os comandos mais comumente utilizados em monografias acadêmicas.
+
+Neste capítulo apresentamos alguns exemplos de como colocar figuras e tabelas no seu texto.
+
+\section{Ilustrações}
+
+\subsection{Legendas}
+As legendas das figuras devem se encontrar no topo da figura e não abaixo, como usualmente colocado. Abaixo da figura, é obrigatório colocar a fonte (mesmo que a figura tenha sido do próprio autor).
+
+As legendas devem conter o tipo da ilustração (Figura, Tabela, etc), seguido de numeração simples (sem número do capítulo).
+
+Toda figura deve ser citada no texto, como nos exemplos que seguem.
+
+\subsection{Figuras}
+A Figura~\ref{fig:escrita} ilustra as fases psicológicas da escrita da dissertação. Você vai se reconhecer no personagem. ;-)
+
+\begin{figure}
+	\caption{Fases psicológicas da escrita da dissertação}
+	\label{fig:escrita}
+	\centering%
+	\begin{minipage}{.8\textwidth}
+		\includegraphics[width=\textwidth]{escrita}
+		\fonte{\citetexto{Cham12}}
+	\end{minipage}
+\end{figure}
+
+\subsection{Tabelas}
+A Tabela~\ref{tab:estacoes} é um exemplo de tabela elaborada pelo(a) próprio(a) autor(a).
+
+\begin{table}
+	\caption{Período das estações do ano no Brasil}
+	\label{tab:estacoes}
+	\centering%
+	\begin{minipage}{.6\textwidth}
+		\begin{tabular*}{\textwidth}{ll}
+			\hline
+			\textbf{Meses} & \textbf{Estações do Ano}\\
+			\hline
+			21 de março a 21 de junho & Outono\\
+			21 de junho a 23 de setembro & Inverno\\
+			23 de setembro a 21 de dezembro & Primavera\\
+			21 de dezembro a 21 de março & Verão\\
+			\hline
+		\end{tabular*}
+		\fonte{Elaborada pela autora.}
+	\end{minipage}
+\end{table}
+
+\section{Resumo}
+O resumo deve conter de 100 a 500 palavras. No resumo não deve haver citações e indica-se que essa seja a última seção do texto a ser escrita. Veja abaixo uma sugestão de organização e exemplo de resumo de \citetexto{Moro11}.
+
+Sugestão (uma a três linhas para cada item):
+\begin{itemize}
+	\item Contexto geral e específico;
+	\item Questão/problema sendo investigado (propósito do trabalho);
+	\item Estado-da-arte (por que precisa de uma solução nova/melhor);
+	\item Solução (nome da proposta, metodologia básica sem detalhes, quais características respondem as questões iniciais, interpretação dos resultados, conclusões).
+\end{itemize}
+
+Exemplo (SANTOS et al., 2008 apud \citealp{Moro11}):
+\begin{quote}
+CONTEXTO: A Web é abundante em páginas que armazenam  dados de forma implícita. PROBLEMA: Em muitos casos, estes dados estão presentes em textos semiestruturados sem a presença de delimitadores explícitos e organizados em uma estrutura também implícita. SOLUÇÃO: Este artigo apresenta uma nova abordagem para extração em textos semi-estruturados baseada em Modelos de Markov Ocultos (Hidden Markov Models - HMM). ESTADO-DA-ARTE e MÉTODO PROPOSTO: Ao contrário de outros trabalhos baseados em HMM, a abordagem proposta dá ênfase à extração de metadados, além dos dados propriamente ditos. Esta abordagem consiste no uso de uma estrutura aninhada de HMMs, onde um HMM principal identifica os atributos no texto e HMMs internos, um para cada atributo, identificam os dados e metadados. Os HMMs são gerados a partir de um treinamento com uma fração de amostras da base a ser extraída. RESULTADOS: Os experimentos realizados com anúncios de classificados retirados da Web mostram que o processo de extração alcança qualidade acima de 0,97 com a medida F, mesmo se esta fração de treinamento é pequena. 
+\end{quote}
