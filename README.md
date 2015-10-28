@@ -1,10 +1,8 @@
-tugunisinos: Classes LaTeX para Monografias e Artigos no Padrão da UNISINOS
+tugunisinos: Classes LaTeX para Monografias e Artigos no Padrão do IFSP VTP
 ==============================================================
 
 Neste pacote você encontra os arquivos necessários para formatar sua
-monografia ou artigo de TCC no padrão da UNISINOS usando LaTeX.
-A última versão sempre pode ser encontrada em
-http://sites.google.com/site/tugunisinos.
+monografia ou artigo de TCC no padrão do IFSP VTP usando LaTeX.
 
 Os arquivos necessários são:
 - UNISINOSmonografia.cls: classe de documento LaTeX para monografias;
@@ -32,5 +30,7 @@ pdflatex exemplo-monografia
 Isso deve recriar o arquivo exemplo-monografia.pdf, que é o documento final.  Esteja
 atento para mensagens de erro e avisos que possam aparecer.
 
-Em caso de dúvida, envie mensagem para o grupo "tugunisinos" em
-http://groups.google.com/group/tugunisinos
+É altamente importante ressaltar que este template foi baseado no template da UNISINOS
+
+Link para o grupo autor do arquivo original http://groups.google.com/group/tugunisinos
+
