@@ -1,4 +1,4 @@
-tugunisinos: Classes LaTeX para Monografias e Artigos no Padrão do IFSP VTP
+Classes LaTeX para Monografias e Artigos no Padrão do IFSP VTP
 ==============================================================
 
 Neste pacote você encontra os arquivos necessários para formatar sua
